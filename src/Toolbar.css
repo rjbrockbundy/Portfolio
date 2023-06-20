@@ -1,0 +1,16 @@
+.toolbar-pos {
+    position: sticky;
+
+
+}
+
+.nav-text.active {
+    color: #ff4d5a !important;
+
+}
+
+.nav-text {
+    font-weight: 600 !important;
+    color: white !important;
+}
+
