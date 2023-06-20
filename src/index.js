@@ -12,19 +12,22 @@ import About from './About.js'
 import Project from './Projects';
 import Contact from './Contact';
 import { Container } from 'react-bootstrap';
+import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <App />
+      <Toolbar />
 
-    <App />
-    <Toolbar />
+      <Container fluid style={{ backgroundColor: 'black', zIndex: -1 }}>
 
-    <Container fluid style={{ backgroundColor: 'black', zIndex: -1 }}>
+        <About id="about" />
+        <Project id="projects" />
+        <Contact id="contact" />
 
-      <About id="about" />
-      <Project id="projects" />
-      <Contact id="contact" />
-    </Container>
+      </Container>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
