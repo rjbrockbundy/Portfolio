@@ -12,23 +12,21 @@ import About from './About.js'
 import Project from './Projects';
 import Contact from './Contact';
 import { Container } from 'react-bootstrap';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <App />
-      <Toolbar />
+  <Router>
+    <App />
+    <Toolbar />
 
-      <Container fluid style={{ backgroundColor: 'black', zIndex: -1 }}>
+    <Container fluid style={{ backgroundColor: 'black', zIndex: -1 }}>
 
-        <About id="about" />
-        <Project id="projects" />
-        <Contact id="contact" />
+      <About id="about" />
+      <Project id="projects" />
+      <Contact id="contact" />
 
-      </Container>
-    </BrowserRouter>
-  </React.StrictMode>
+    </Container>
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function
